@@ -16,4 +16,4 @@ Configuration is the easy half. These labs are built around failure — adjacenc
 
 ## Stack
 
-Cisco Modeling Labs · IOS-XE · Python · Netmiko
+Cisco Modeling Labs · IOS-XE · Linux · Python · Netmiko
