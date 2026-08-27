@@ -1,0 +1,1 @@
+First boot: IOSv nodes boot with empty NVRAM, which triggers autoinstall. It DHCPs onto Gi0/0 and overwrites the static mgmt address. Reload each node once after initial power-on; NVRAM is populated by then and the static address holds.

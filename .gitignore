@@ -1,0 +1,12 @@
+#secrets
+inventory.yaml
+
+*python
+__pycahche__/
+*.pyc
+.venv/
+venv/
+
+# editor / os
+.vscode/
+Thumbs.db
