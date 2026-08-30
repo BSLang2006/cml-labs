@@ -1,8 +1,10 @@
 # CML Labs
 
-Cisco Modeling Labs topologies built to practice enterprise routing and switching, then deliberately broken to practice troubleshooting.
+Documentation | Automation | Rapid Iteration
 
-Each lab includes the topology file, device configs, a description of the failure introduced, and how it was isolated.
+Cisco Modeling Labs - using code to manage, build, and learn enterprise networking. 
+
+Each topology folder contains compatible labs, device configs, and documentation desinged for rapid deployment and learning. 
 
 ## Labs
 
@@ -12,8 +14,23 @@ Each lab includes the topology file, device configs, a description of the failur
 
 ## Why
 
-Configuration is the easy half. These labs are built around failure — adjacency that won't form, a route that isn't installed, a trunk dropping a VLAN — to build a repeatable troubleshooting method rather than memorized commands.
+Rapid deployment means more time learning
 
 ## Stack
 
 Cisco Modeling Labs · IOS-XE · Linux · Python · Netmiko
+
+## Note:
+
+IOSv devices don't boot intially with nvram - all devices must run <reload> to get the static IP address from the baked config.
+
+## Connections:
+
+CML
+external_connector - named "bridge" set to Bridge 1
+
+sw0 always = x.x.x.100
+r1-10 always = x.x.x.101-110
+sw1-10 always = x.x.x.111-120
+
+If more than 10 of either device or multiple labs are running concurrently special ip address considerations need to be made.
