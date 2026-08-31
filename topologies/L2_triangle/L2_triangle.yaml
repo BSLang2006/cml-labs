@@ -1,0 +1,427 @@
+annotations:
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#808080FF'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      VLAN 99
+      MGMT
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -160.0
+    y1: -120.0
+    z_index: 0
+smart_annotations: []
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: default
+        content: bridge99
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: Bridge 99
+    node_definition: external_connector
+    parameters: {}
+    ram: null
+    tags: []
+    x: -40
+    y: -240
+    interfaces:
+      - id: i0
+        label: port
+        mac_address: null
+        type: physical
+        slot: 0
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname sw0
+
+          no service config
+
+          ip domain name lab.local
+          username admin privilege 15 secret homepass
+          ip ssh version 2
+          no ip domain-lookup
+
+          vtp mode transparent
+
+          vlan 99
+           name MGMT
+
+          interface g0/0
+           switchport trunk encapsulation dot1q
+           switchport mode trunk
+           switchport trunk native vlan 99
+           switchport trunk allowed vlan 99
+           no shutdown
+
+          interface g0/1
+           switchport trunk encapsulation dot1q
+           switchport mode trunk
+           switchport trunk native vlan 99
+           switchport trunk allowed vlan 99
+           no shutdown
+
+          interface g0/2
+           switchport trunk encapsulation dot1q
+           switchport mode trunk
+           switchport trunk native vlan 99
+           switchport trunk allowed vlan 99
+           no shutdown
+
+          interface g0/3
+           switchport trunk encapsulation dot1q
+           switchport mode trunk
+           switchport trunk native vlan 99
+           switchport trunk allowed vlan 99
+           no shutdown
+
+          interface vlan 99
+           ip address 10.10.99.100 255.255.255.0
+           no shutdown
+
+          line vty 0 15
+           transport input ssh
+           login local
+           length 0
+
+          line con 0
+           logging synchronous
+           exec-timeout 0 0
+           length 0
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: sw0
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: -40
+    y: -80
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname sw1
+
+          no service config
+
+          ip domain name lab.local
+          username admin privilege 15 secret homepass
+          ip ssh version 2
+          no ip domain-lookup
+
+          vtp mode transparent
+
+          vlan 99
+           name MGMT
+
+          interface g0/0
+           switchport trunk encapsulation dot1q
+           switchport mode trunk
+           switchport trunk native vlan 99
+           switchport trunk allowed vlan 99
+           no shutdown
+
+          interface vlan 99
+           ip address 10.10.99.101 255.255.255.0
+           no shutdown
+
+          line vty 0 15
+           transport input ssh
+           login local
+           length 0
+
+          line con 0
+           logging synchronous
+           exec-timeout 0 0
+           length 0
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: sw1
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: -40
+    y: 120
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname sw2
+
+          no service config
+
+          ip domain name lab.local
+          username admin privilege 15 secret homepass
+          ip ssh version 2
+          no ip domain-lookup
+
+          vtp mode transparent
+
+          vlan 99
+           name MGMT
+
+          interface g0/0
+           switchport trunk encapsulation dot1q
+           switchport mode trunk
+           switchport trunk native vlan 99
+           switchport trunk allowed vlan 99
+           no shutdown
+
+          interface vlan 99
+           ip address 10.10.99.102 255.255.255.0
+           no shutdown
+
+          line vty 0 15
+           transport input ssh
+           login local
+           length 0
+
+          line con 0
+           logging synchronous
+           exec-timeout 0 0
+           length 0
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: sw2
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: -320
+    y: 280
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname sw3
+
+          no service config
+
+          ip domain name lab.local
+          username admin privilege 15 secret homepass
+          ip ssh version 2
+          no ip domain-lookup
+
+          vtp mode transparent
+
+          vlan 99
+           name MGMT
+
+          interface g0/0
+           switchport trunk encapsulation dot1q
+           switchport mode trunk
+           switchport trunk native vlan 99
+           switchport trunk allowed vlan 99
+           no shutdown
+
+          interface vlan 99
+           ip address 10.10.99.103 255.255.255.0
+           no shutdown
+
+          line vty 0 15
+           transport input ssh
+           login local
+           length 0
+
+          line con 0
+           logging synchronous
+           exec-timeout 0 0
+           length 0
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: sw3
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: 240
+    y: 280
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        type: physical
+        slot: 0
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        type: physical
+        slot: 1
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        type: physical
+        slot: 2
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        type: physical
+        slot: 3
+links:
+  - id: l0
+    n1: n1
+    n2: n0
+    i1: i1
+    i2: i0
+    conditioning: {}
+    label: sw0-GigabitEthernet0/0<->Bridge 99-port
+  - id: l1
+    n1: n1
+    n2: n2
+    i1: i2
+    i2: i1
+    conditioning: {}
+    label: sw0-GigabitEthernet0/1<->iosvl2-0-GigabitEthernet0/0
+  - id: l2
+    n1: n3
+    n2: n1
+    i1: i1
+    i2: i3
+    conditioning: {}
+    label: sw2-GigabitEthernet0/0<->sw0-GigabitEthernet0/2
+  - id: l3
+    n1: n1
+    n2: n4
+    i1: i4
+    i2: i1
+    conditioning: {}
+    label: sw0-GigabitEthernet0/3<->sw3-GigabitEthernet0/0
+  - id: l4
+    n1: n2
+    n2: n3
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: sw1-GigabitEthernet0/1<->sw2-GigabitEthernet0/1
+  - id: l5
+    n1: n2
+    n2: n4
+    i1: i3
+    i2: i2
+    conditioning: {}
+    label: sw1-GigabitEthernet0/2<->sw3-GigabitEthernet0/1
+  - id: l6
+    n1: n3
+    n2: n4
+    i1: i3
+    i2: i3
+    conditioning: {}
+    label: sw2-GigabitEthernet0/2<->sw3-GigabitEthernet0/2
+lab:
+  description: ''
+  notes: ''
+  title: L2_triangle
+  version: 0.3.0
