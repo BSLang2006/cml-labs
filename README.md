@@ -10,7 +10,7 @@ Each topology folder contains compatible labs, device configs, and documentation
 
 | Lab | Focus | Writeup |
 |---|---|---|
-| OSPF | adjacency creation | |
+| OSPF | adjacency creation | https://brandonscottlang.com/posts/ospf |
 | L2 Triangle | L2 protocols | |
 
 ## Why
