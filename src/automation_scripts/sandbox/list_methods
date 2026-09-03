@@ -1,0 +1,20 @@
+lst.append(x)        # add one item to the end
+lst.extend(other)    # add all items from another list
+lst.insert(i, x)     # add x at position i
+lst.pop()            # remove & return last item
+lst.pop(i)           # remove & return item at i
+lst.remove(x)        # remove first occurrence of value x
+lst.index(x)         # position of first occurrence
+lst.count(x)         # how many times x appears
+lst.sort()           # sort in place — returns None
+lst.reverse()        # reverse in place — returns None
+lst.copy()           # shallow copy
+lst.clear()          # empty it
+
+Not methods, but you'll use them constantly:
+
+python
+len(lst)             # how many items
+x in lst             # True/False
+sorted(lst)          # returns a NEW sorted list
+lst[0]  lst[-1]  lst[1:3

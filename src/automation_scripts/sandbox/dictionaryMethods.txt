@@ -1,0 +1,41 @@
+d.keys()            # all keys
+d.values()          # all values
+d.items()           # key/value pairs
+d.get(k)            # value, or None if missing — no crash
+d.get(k, default)   # value, or your fallback
+d[k] = v            # add or overwrite
+d.pop(k)            # remove k, hand back its value
+d.update(other)     # merge another dict in
+k in d              # True/False — operator, not a method
+len(d)              # how many pairs
+
+lst.append(x)        # add one item to the end
+lst.extend(other)    # add all items from another list
+lst.insert(i, x)     # add x at position i
+lst.pop()            # remove & return last item
+lst.pop(i)           # remove & return item at i
+lst.remove(x)        # remove first occurrence of value x
+lst.index(x)         # position of first occurrence
+lst.count(x)         # how many times x appears
+lst.sort()           # sort in place — returns None
+lst.reverse()        # reverse in place — returns None
+lst.copy()           # shallow copy
+lst.clear()          # empty it
+python
+len(lst)             # how many items
+x in lst             # True/False
+sorted(lst)          # returns a NEW sorted list
+lst[0]  lst[-1]  lst[1:3]
+
+
+split()          # → list, splits on whitespace by default
+splitlines()     # → list of lines
+strip()          # trim whitespace both ends
+lstrip() .rstrip()
+startswith()     # → bool
+endswith()       # → bool
+find()           # → index, -1 if absent
+replace(a, b)
+lower() .upper()
+join(list)       # list → string
+isdigit()        # → bool
