@@ -32,6 +32,6 @@ external_connector - named "bridge 99" set to Bridge 99
 
 sw0 always = x.x.x.100
 sw1-10 always = x.x.x.101-110
-r1-10 always = x.x.x.111-120
+r1-10 always = x.x.x.201-210
 
 If more than 10 of either device or multiple labs are running concurrently special considerations need to be made regarding IP assignments.
